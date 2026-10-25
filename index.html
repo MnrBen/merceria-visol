@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Demo: que no la indexen los buscadores hasta que sea la web real -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Mercería Visol · Mercería y lencería en Errenteria</title>
+  <meta name="description" content="Mercería Visol: mercería y lencería de barrio en Maurice Ravel Kalea, 10, Errenteria (Gipuzkoa). Horario, opiniones y cómo llegar.">
+  <meta name="theme-color" content="#1E5B5E">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Young+Serif&display=swap">
+
+  <link rel="preload" as="image" href="imagenes/bobinas-640.webp" imagesrcset="imagenes/bobinas-640.webp 640w, imagenes/bobinas-1024.webp 1024w" imagesizes="(min-width: 860px) 480px, calc(100vw - 2.5rem)">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Iconos (dibujos de una línea, se reutilizan con <use>) -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-lugar" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-bolsa" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  </svg>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ========== CABECERA FIJA: nombre + botón de llamar siempre a mano ========== -->
+  <header class="cabecera">
+    <div class="cabecera__dentro">
+      <a class="marca" href="#inicio" aria-label="Mercería Visol, volver al inicio">
+        <span class="marca__tipo">Mercería</span>
+        <span class="marca__nombre">Visol</span>
+      </a>
+      <nav class="menu" aria-label="Secciones">
+        <a href="#productos">Qué encontrarás</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#horario">Horario</a>
+        <a href="#llegar">Cómo llegar</a>
+      </nav>
+      <a class="boton boton--accion boton--compacto" href="tel:+34943514598">
+        <svg class="icono" aria-hidden="true"><use href="#i-tel"/></svg>
+        <span>Llamar</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ========== PORTADA: qué es, qué vende, dónde está y cuándo abre ========== -->
+    <section class="portada" id="inicio" aria-labelledby="titulo">
+      <div class="contenedor portada__rejilla">
+        <div class="portada__texto">
+          <p class="saludo"><span lang="eu">Ongi etorri</span></p>
+          <h1 id="titulo">Mercería Visol</h1>
+          <p class="lema">Mercería y lencería de barrio en Errenteria.</p>
+
+          <div class="cinta" aria-hidden="true"></div>
+
+          <ul class="ficha">
+            <li>
+              <a href="#productos">
+                <svg class="icono" aria-hidden="true"><use href="#i-bolsa"/></svg>
+                <span>Hilos, botones, ropa interior y mucho más</span>
+              </a>
+            </li>
+            <li>
+              <a href="#llegar">
+                <svg class="icono" aria-hidden="true"><use href="#i-lugar"/></svg>
+                <span>Maurice Ravel Kalea, 10 · Errenteria</span>
+              </a>
+            </li>
+            <li>
+              <a href="#horario">
+                <svg class="icono" aria-hidden="true"><use href="#i-reloj"/></svg>
+                <span class="estado-corto" data-estado-corto>Lunes a viernes, mañana y tarde · Sábados por la mañana</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+34943514598">
+                <svg class="icono" aria-hidden="true"><use href="#i-tel"/></svg>
+                <span>943 51 45 98</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <figure class="foto portada__foto">
+          <img src="imagenes/bobinas-640.webp"
+               srcset="imagenes/bobinas-640.webp 640w, imagenes/bobinas-1024.webp 1024w"
+               sizes="(min-width: 860px) 480px, calc(100vw - 2.5rem)"
+               width="640" height="426" fetchpriority="high"
+               alt="Montón de bobinas de hilo de muchos colores">
+          <figcaption class="etiqueta-foto">Foto de ejemplo</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== QUÉ ENCONTRARÁS ========== -->
+    <section class="seccion seccion--blanca" id="productos" aria-labelledby="t-productos">
+      <div class="contenedor">
+        <h2 id="t-productos">Qué encontrarás</h2>
+        <p class="entradilla">Todo lo necesario para coser, arreglar y tejer, y también ropa interior y complementos.</p>
+
+        <h3 class="subtitulo">Mercería</h3>
+        <p class="nota">Categorías de ejemplo, a falta de confirmar con la tienda.</p>
+
+        <ul class="categorias">
+          <li class="categoria">
+            <figure class="foto">
+              <img src="imagenes/hilos-640.webp" srcset="imagenes/hilos-640.webp 640w, imagenes/hilos-854.webp 854w"
+                   sizes="(min-width: 1100px) 245px, calc(50vw - 1.6rem)"
+                   width="640" height="480" loading="lazy" alt="Bobinas de hilo de colores en fila sobre una mesa de madera">
+              <figcaption class="etiqueta-foto">Foto de ejemplo</figcaption>
+            </figure>
+            <h4>Hilos y bobinas</h4>
+          </li>
+          <li class="categoria">
+            <figure class="foto">
+              <img src="imagenes/botones-640.webp" srcset="imagenes/botones-640.webp 640w, imagenes/botones-855.webp 855w"
+                   sizes="(min-width: 1100px) 245px, calc(50vw - 1.6rem)"
+                   width="640" height="480" loading="lazy" alt="Botones de distintos tamaños, colores y materiales">
+              <figcaption class="etiqueta-foto">Foto de ejemplo</figcaption>
+            </figure>
+            <h4>Botones</h4>
+          </li>
+          <li class="categoria">
+            <figure class="foto">
+              <img src="imagenes/lanas-640.webp" srcset="imagenes/lanas-640.webp 640w, imagenes/lanas-994.webp 994w"
+                   sizes="(min-width: 1100px) 245px, calc(50vw - 1.6rem)"
+                   width="640" height="480" loading="lazy" alt="Ovillos de lana de colores apilados">
+              <figcaption class="etiqueta-foto">Foto de ejemplo</figcaption>
+            </figure>
+            <h4>Lanas y ovillos</h4>
+          </li>
+          <li class="categoria">
+            <figure class="foto">
+              <img src="imagenes/alfileres-640.webp" srcset="imagenes/alfileres-640.webp 640w, imagenes/alfileres-1000.webp 1000w"
+                   sizes="(min-width: 1100px) 245px, calc(50vw - 1.6rem)"
+                   width="640" height="480" loading="lazy" alt="Alfileres de cabeza de colores sobre una tela clara">
+              <figcaption class="etiqueta-foto">Foto de ejemplo</figcaption>
+            </figure>
+            <h4>Agujas y alfileres</h4>
+          </li>
+        </ul>
+
+        <ul class="etiquetas" aria-label="Otros artículos de mercería (de ejemplo)">
+          <li>Cremalleras</li>
+          <li>Cintas y puntillas</li>
+          <li>Gomas y elásticos</li>
+          <li>Tijeras y dedales</li>
+          <li>Parches y apliques</li>
+        </ul>
+
+        <h3 class="subtitulo">Lencería y complementos <span class="confirmar">[CONFIRMAR]</span></h3>
+        <p class="nota">Según los directorios comerciales y las opiniones de clientes.</p>
+        <ul class="etiquetas etiquetas--rosa">
+          <li>Ropa interior</li>
+          <li>Calcetines y medias</li>
+          <li>Bañadores</li>
+          <li>Bufandas y guantes</li>
+          <li>Paraguas</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== OPINIONES (reseñas reales de Google, literales) ========== -->
+    <section class="seccion seccion--rosa" id="opiniones" aria-labelledby="t-opiniones">
+      <div class="contenedor">
+        <h2 id="t-opiniones">Lo que dicen de Visol</h2>
+        <p class="entradilla">Opiniones reales de clientes publicadas en Google. Lo que más se repite: el trato.</p>
+
+        <ul class="opiniones">
+          <li class="opinion">
+            <p class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</p>
+            <blockquote><p>Buenísimo trato tanto de la madre como de la hija, muy buenos productos a precios razonables.</p></blockquote>
+            <p class="autor">Gorka Fer</p>
+          </li>
+          <li class="opinion">
+            <p class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</p>
+            <blockquote><p>Buenísima atención. Mucha variedad y calidad en los productos.</p></blockquote>
+            <p class="autor">Ane Mi</p>
+          </li>
+          <li class="opinion">
+            <p class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</p>
+            <blockquote><p>Muy profesionales en su trabajo y muy buen trato con ellas.</p></blockquote>
+            <p class="autor">Super Burgi</p>
+          </li>
+          <li class="opinion">
+            <p class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</p>
+            <blockquote><p>Son super amables lo mismo la madre que la hija son encantadoras.</p></blockquote>
+            <p class="autor">Emilia Robledo Garriz</p>
+          </li>
+          <li class="opinion">
+            <p class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</p>
+            <blockquote><p>De lo mejor del barrio!!</p></blockquote>
+            <p class="autor">Oscar</p>
+          </li>
+          <li class="opinion">
+            <p class="estrellas" role="img" aria-label="4 de 5 estrellas">★★★★<span class="estrella-vacia">★</span></p>
+            <blockquote><p>Conseguí lo que buscaba.</p></blockquote>
+            <p class="autor">Idoia Rúa</p>
+          </li>
+        </ul>
+
+        <a class="enlace-flecha" href="https://www.google.com/maps/search/?api=1&amp;query=Mercer%C3%ADa%20Visol%2C%20Maurice%20Ravel%20Kalea%2010%2C%20Errenteria" target="_blank" rel="noopener">
+          Ver todas las opiniones en Google
+          <svg class="icono" aria-hidden="true"><use href="#i-flecha"/></svg>
+          <span class="sr">(se abre en una pestaña nueva)</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== HORARIO + LLAMAR ========== -->
+    <section class="seccion" id="horario" aria-labelledby="t-horario">
+      <div class="contenedor horario__rejilla">
+        <div>
+          <h2 id="t-horario">Horario</h2>
+          <p class="estado" data-estado aria-live="polite" hidden></p>
+
+          <table class="horario">
+            <caption class="sr">Horario de apertura de la tienda</caption>
+            <tbody>
+              <tr data-dia="1" data-tramos="09:30-13:00 17:00-19:45"><th scope="row">Lunes</th><td>9:30–13:00 <span class="y">y</span> 17:00–19:45</td></tr>
+              <tr data-dia="2" data-tramos="09:30-13:00 16:00-19:00"><th scope="row">Martes</th><td>9:30–13:00 <span class="y">y</span> 16:00–19:00</td></tr>
+              <tr data-dia="3" data-tramos="09:30-13:00 17:00-19:45"><th scope="row">Miércoles</th><td>9:30–13:00 <span class="y">y</span> 17:00–19:45</td></tr>
+              <tr data-dia="4" data-tramos="09:30-13:00 16:00-19:00"><th scope="row">Jueves</th><td>9:30–13:00 <span class="y">y</span> 16:00–19:00</td></tr>
+              <tr data-dia="5" data-tramos="09:30-13:00 17:00-19:45"><th scope="row">Viernes</th><td>9:30–13:00 <span class="y">y</span> 17:00–19:45</td></tr>
+              <tr data-dia="6" data-tramos="10:00-13:00"><th scope="row">Sábado</th><td>10:00–13:00</td></tr>
+              <tr data-dia="0" data-tramos=""><th scope="row">Domingo</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+          <p class="nota">Festivos y vacaciones: <span class="confirmar">[CONFIRMAR]</span></p>
+        </div>
+
+        <div class="llamar">
+          <p class="llamar__titulo">¿Tienes alguna duda o buscas algo concreto?</p>
+          <p>Llámanos y te lo decimos al momento.</p>
+          <a class="boton boton--accion boton--grande" href="tel:+34943514598">
+            <svg class="icono" aria-hidden="true"><use href="#i-tel"/></svg>
+            <span>Llamar al 943 51 45 98</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CÓMO LLEGAR ========== -->
+    <section class="seccion seccion--blanca" id="llegar" aria-labelledby="t-llegar">
+      <div class="contenedor llegar__rejilla">
+        <div>
+          <h2 id="t-llegar">Cómo llegar</h2>
+          <address class="direccion">
+            Maurice Ravel Kalea, 10<br>
+            20100 Errenteria (Gipuzkoa)
+          </address>
+          <p class="nota">La entrada está en la parte trasera del número 10. <span class="confirmar">[CONFIRMAR]</span></p>
+          <a class="boton boton--secundario" href="https://www.google.com/maps/dir/?api=1&amp;destination=Mercer%C3%ADa%20Visol%2C%20Maurice%20Ravel%20Kalea%2010%2C%2020100%20Errenteria" target="_blank" rel="noopener">
+            <svg class="icono" aria-hidden="true"><use href="#i-lugar"/></svg>
+            <span>Abrir en Google Maps</span>
+            <span class="sr">(se abre en una pestaña nueva)</span>
+          </a>
+        </div>
+        <div class="mapa">
+          <iframe src="https://www.google.com/maps?q=Mercer%C3%ADa%20Visol%2C%20Maurice%20Ravel%20Kalea%2010%2C%2020100%20Errenteria&amp;z=17&amp;output=embed"
+                  title="Mapa: Mercería Visol en Maurice Ravel Kalea, 10, Errenteria"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== PIE ========== -->
+  <footer class="pie">
+    <div class="cinta cinta--pie" aria-hidden="true"></div>
+    <div class="contenedor">
+      <p class="pie__nombre">Mercería Visol</p>
+      <p>Maurice Ravel Kalea, 10 · 20100 Errenteria · <a href="tel:+34943514598">943 51 45 98</a></p>
+      <p class="pie__fotos">Las fotos son de ejemplo, de bancos de imágenes libres (CC0).</p>
+      <p class="pie__firma">Propuesta de diseño · Muner E.B. · 688 628 668</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
