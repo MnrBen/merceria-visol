@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Demo: que no la indexen los buscadores hasta que sea la web real -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Contacto y horario · Mercería Visol, Errenteria</title>
+  <meta name="description" content="Horario, teléfono y cómo llegar a Mercería Visol: Maurice Ravel Kalea, 10, 20100 Errenteria (Gipuzkoa). Teléfono 943 51 45 98.">
+  <meta name="theme-color" content="#1E5B5E">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Young+Serif&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Iconos (dibujos de una línea, se reutilizan con <use>) -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-lugar" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-bolsa" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  </svg>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ========== CABECERA FIJA: nombre + botón de llamar siempre a mano ========== -->
+  <header class="cabecera">
+    <div class="cabecera__dentro">
+      <a class="marca" href="index.html" aria-label="Mercería Visol, inicio">
+        <span class="marca__tipo">Mercería</span>
+        <span class="marca__nombre">Visol</span>
+      </a>
+      <nav class="menu" aria-label="Páginas">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
+      </nav>
+      <a class="boton boton--accion boton--compacto" href="tel:+34943514598">
+        <svg class="icono" aria-hidden="true"><use href="#i-tel"/></svg>
+        <span>Llamar</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Menú de páginas en móvil: una fila bajo la cabecera, sin desplegables -->
+  <nav class="menu-movil" aria-label="Páginas">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="contacto.html" aria-current="page">Contacto</a>
+  </nav>
+
+  <main id="contenido">
+
+    <!-- ========== CABECERA DE PÁGINA (sin foto: el adelanto del Inicio tampoco la lleva) ========== -->
+    <section class="cabecera-pagina cabecera-pagina--solo-texto" aria-labelledby="titulo">
+      <div class="contenedor">
+        <p class="saludo">Contacto</p>
+        <h1 id="titulo">Ven a vernos</h1>
+        <p class="intro">Estamos en Maurice Ravel Kalea, 10, en Errenteria. Pásate por la tienda o llámanos: te atendemos con mucho gusto.</p>
+        <p class="estado" data-estado aria-live="polite" hidden></p>
+        <div class="cinta cinta--anima" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ========== HORARIO + LLAMAR ========== -->
+    <section class="seccion seccion--blanca" id="horario" aria-labelledby="t-horario">
+      <div class="contenedor horario__rejilla">
+        <div>
+          <h2 id="t-horario">Horario</h2>
+          <table class="horario">
+            <caption class="sr">Horario de apertura de la tienda</caption>
+            <tbody>
+              <tr data-dias="1 3 5" data-tramos="09:30-13:00 17:00-19:45"><th scope="row">Lunes, miércoles y viernes</th><td>9:30–13:00<br>17:00–19:45</td></tr>
+              <tr data-dias="2 4" data-tramos="09:30-13:00 16:00-19:00"><th scope="row">Martes y jueves</th><td>9:30–13:00<br>16:00–19:00</td></tr>
+              <tr data-dias="6" data-tramos="10:00-13:00"><th scope="row">Sábado</th><td>10:00–13:00</td></tr>
+              <tr data-dias="0" data-tramos=""><th scope="row">Domingo</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="llamar">
+          <p class="llamar__titulo">¿Tienes alguna duda?</p>
+          <p>Te contestamos al momento en horario de tienda.</p>
+          <p class="llamar__numero">943 51 45 98 <span>· teléfono fijo</span></p>
+          <a class="boton boton--accion boton--grande" href="tel:+34943514598">
+            <svg class="icono" aria-hidden="true"><use href="#i-tel"/></svg>
+            <span>Llamar ahora</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CÓMO LLEGAR (mapa grande) ========== -->
+    <section class="seccion" id="llegar" aria-labelledby="t-llegar">
+      <div class="contenedor">
+        <div class="llegar__cabeza">
+          <div>
+            <h2 id="t-llegar">Cómo llegar</h2>
+            <address class="direccion">
+              Maurice Ravel Kalea, 10<br>
+              20100 Errenteria (Gipuzkoa)
+            </address>
+            <p class="nota">La entrada está en la parte trasera del número 10. <span class="confirmar">[CONFIRMAR]</span></p>
+          </div>
+          <a class="boton boton--secundario" href="https://www.google.com/maps/dir/?api=1&amp;destination=Mercer%C3%ADa%20Visol%2C%20Maurice%20Ravel%20Kalea%2010%2C%2020100%20Errenteria" target="_blank" rel="noopener">
+            <svg class="icono" aria-hidden="true"><use href="#i-lugar"/></svg>
+            <span>Cómo llegar con Google Maps</span>
+            <span class="sr">(se abre en una pestaña nueva)</span>
+          </a>
+        </div>
+        <div class="mapa mapa--grande">
+          <iframe src="https://www.google.com/maps?q=Mercer%C3%ADa%20Visol%2C%20Maurice%20Ravel%20Kalea%2010%2C%2020100%20Errenteria&amp;z=17&amp;output=embed"
+                  title="Mapa: Mercería Visol en Maurice Ravel Kalea, 10, Errenteria"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== PIE ========== -->
+  <footer class="pie">
+    <div class="cinta cinta--pie" aria-hidden="true"></div>
+    <div class="contenedor">
+      <p class="pie__nombre">Mercería Visol</p>
+      <nav aria-label="Pie de página">
+        <p class="pie__menu"><a href="index.html">Inicio</a> · <a href="productos.html">Productos</a> · <a href="contacto.html" aria-current="page">Contacto</a> · <a href="legal.html">Aviso legal y privacidad</a></p>
+      </nav>
+      <p>Maurice Ravel Kalea, 10 · 20100 Errenteria · <a href="tel:+34943514598">943 51 45 98</a></p>
+      <p class="pie__firma">Propuesta de diseño · Muner E.B. · 688 628 668</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

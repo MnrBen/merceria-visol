@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Demo: que no la indexen los buscadores hasta que sea la web real -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Productos · Mercería Visol, Errenteria</title>
+  <meta name="description" content="Qué encontrarás en Mercería Visol (Errenteria): hilos, botones, lanas, agujas y todo para coser, y también ropa interior y complementos.">
+  <meta name="theme-color" content="#1E5B5E">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&family=Young+Serif&display=swap">
+
+  <link rel="preload" as="image" href="../imagenes/dedal-640.webp" imagesrcset="../imagenes/dedal-640.webp 640w, ../imagenes/dedal-1024.webp 1024w" imagesizes="(min-width: 860px) 420px, calc(100vw - 2.5rem)">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Iconos (dibujos de una línea, se reutilizan con <use>) -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-lugar" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-bolsa" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  </svg>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ========== CABECERA FIJA: nombre + botón de llamar siempre a mano ========== -->
+  <header class="cabecera">
+    <div class="cabecera__dentro">
+      <a class="marca" href="index.html" aria-label="Mercería Visol, inicio">
+        <span class="marca__tipo">Mercería</span>
+        <span class="marca__nombre">Visol</span>
+      </a>
+      <nav class="menu" aria-label="Páginas">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html" aria-current="page">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <a class="boton boton--accion boton--compacto" href="tel:+34943514598">
+        <svg class="icono" aria-hidden="true"><use href="#i-tel"/></svg>
+        <span>Llamar</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Menú de páginas en móvil: una fila bajo la cabecera, sin desplegables -->
+  <nav class="menu-movil" aria-label="Páginas">
+    <a href="index.html">Inicio</a>
+    <a href="productos.html" aria-current="page">Productos</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main id="contenido">
+
+    <!-- ========== CABECERA DE PÁGINA (foto distinta del adelanto del Inicio) ========== -->
+    <section class="cabecera-pagina" aria-labelledby="titulo">
+      <div class="contenedor cabecera-pagina__rejilla">
+        <div>
+          <p class="saludo">Productos</p>
+          <h1 id="titulo">Qué encontrarás en Visol</h1>
+          <p class="intro">Hilos, botones, lanas, agujas y todo lo necesario para coser, arreglar o tejer en casa. Y también ropa interior y complementos para el día a día.</p>
+          <div class="cinta cinta--anima" aria-hidden="true"></div>
+        </div>
+        <figure class="foto cabecera-pagina__foto">
+          <img src="../imagenes/dedal-640.webp"
+               srcset="../imagenes/dedal-640.webp 640w, ../imagenes/dedal-1024.webp 1024w"
+               sizes="(min-width: 860px) 420px, calc(100vw - 2.5rem)"
+               width="640" height="480" fetchpriority="high"
+               alt="Dedales, botones, una cinta métrica y un carrete de hilo verde">
+          <figcaption class="etiqueta-foto">Foto de ejemplo</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== GALERÍA CON FILTROS (?ver=merceria | ?ver=lenceria) ========== -->
+    <section class="seccion seccion--blanca" id="galeria" aria-labelledby="t-galeria">
+      <div class="contenedor">
+        <h2 id="t-galeria">Por secciones</h2>
+        <p class="entradilla">Fotos de ejemplo mientras no tengamos las de la tienda.</p>
+
+        <!-- Los filtros solo aparecen con JS; sin JS se ve todo -->
+        <div class="filtros" role="group" aria-label="Filtrar por sección" data-filtros hidden>
+          <button type="button" class="filtro" data-filtro="todo" aria-pressed="true">Todo</button>
+          <button type="button" class="filtro" data-filtro="merceria" aria-pressed="false">Mercería</button>
+          <button type="button" class="filtro" data-filtro="lenceria" aria-pressed="false">Lencería y complementos</button>
+        </div>
+        <p class="sr" aria-live="polite" data-resultado></p>
+
+        <ul class="galeria" data-galeria>
+            <li class="galeria__item" data-cat="merceria">
+              <figure class="foto">
+                <img src="../imagenes/bobinas-galeria-640.webp" width="640" height="480" loading="lazy" alt="Montón de bobinas de hilo de muchos colores">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Hilos de coser</p>
+            </li>
+            <li class="galeria__item" data-cat="merceria">
+              <figure class="foto">
+                <img src="../imagenes/madejas-640.webp" width="640" height="480" loading="lazy" alt="Madejas de hilo de bordar de colores vivos">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Hilos de bordar</p>
+            </li>
+            <li class="galeria__item" data-cat="merceria">
+              <figure class="foto">
+                <img src="../imagenes/botones-640.webp" width="640" height="480" loading="lazy" alt="Botones de distintos tamaños, colores y materiales">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Botones</p>
+            </li>
+            <li class="galeria__item" data-cat="merceria">
+              <figure class="foto">
+                <img src="../imagenes/lanas-640.webp" width="640" height="480" loading="lazy" alt="Ovillos de lana de colores apilados">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Lanas</p>
+            </li>
+            <li class="galeria__item" data-cat="merceria">
+              <figure class="foto">
+                <img src="../imagenes/ovillos-640.webp" width="640" height="480" loading="lazy" alt="Tres ovillos de hilo de algodón: verde, amarillo y rojo">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Ovillos de algodón</p>
+            </li>
+            <li class="galeria__item" data-cat="merceria">
+              <figure class="foto">
+                <img src="../imagenes/alfileres-640.webp" width="640" height="480" loading="lazy" alt="Alfileres de cabeza de colores sobre una tela clara">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Agujas y alfileres</p>
+            </li>
+            <li class="galeria__item" data-cat="merceria">
+              <figure class="foto">
+                <img src="../imagenes/costurero-640.webp" width="640" height="480" loading="lazy" alt="Tijeras, hilos, imperdibles y cinta métrica sobre un fondo azul">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Tijeras y accesorios</p>
+            </li>
+            <li class="galeria__item" data-cat="merceria">
+              <figure class="foto">
+                <img src="../imagenes/hilos-640.webp" width="640" height="480" loading="lazy" alt="Bobinas de hilo de colores en fila sobre una mesa de madera">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Carretes de colores</p>
+            </li>
+            <li class="galeria__item" data-cat="lenceria">
+              <figure class="foto">
+                <img src="../imagenes/calcetines-640.webp" width="640" height="480" loading="lazy" alt="Pies con calcetines de lana de rayas de colores">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Calcetines</p>
+            </li>
+            <li class="galeria__item" data-cat="lenceria">
+              <figure class="foto">
+                <img src="../imagenes/bufanda-640.webp" width="640" height="480" loading="lazy" alt="Detalle de una bufanda de lana de cuadros azules, amarillos y blancos">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Bufandas</p>
+            </li>
+            <li class="galeria__item" data-cat="lenceria">
+              <figure class="foto">
+                <img src="../imagenes/paraguas-640.webp" width="640" height="480" loading="lazy" alt="Paraguas abiertos de muchos colores">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Paraguas</p>
+            </li>
+            <li class="galeria__item" data-cat="lenceria">
+              <figure class="foto">
+                <img src="../imagenes/banadores-640.webp" width="640" height="480" loading="lazy" alt="Bañadores estampados colgados en perchas de madera">
+                <span class="etiqueta-foto">Foto de ejemplo</span>
+              </figure>
+              <p class="galeria__pie">Bañadores</p>
+            </li>
+        </ul>
+
+        <div class="listas listas--fila">
+          <div class="etiqueta-cosida" data-cat="merceria">
+            <h3 class="subtitulo">Mercería</h3>
+            <ul class="lista">
+              <li>Hilos y bobinas</li>
+              <li>Botones</li>
+              <li>Lanas y ovillos</li>
+              <li>Agujas y alfileres</li>
+              <li>Cremalleras</li>
+              <li>Cintas y puntillas</li>
+              <li>Gomas y elásticos</li>
+              <li>Tijeras y dedales</li>
+            </ul>
+          </div>
+          <div class="etiqueta-cosida etiqueta-cosida--rosa" data-cat="lenceria">
+            <h3 class="subtitulo">Lencería y complementos <span class="confirmar">[CONFIRMAR]</span></h3>
+            <ul class="lista">
+              <li>Ropa interior</li>
+              <li>Calcetines y medias</li>
+              <li>Bañadores</li>
+              <li>Bufandas y guantes</li>
+              <li>Paraguas</li>
+            </ul>
+          </div>
+        </div>
+        <p class="nota">Listado orientativo, a falta de confirmar con la tienda.</p>
+      </div>
+    </section>
+
+    <!-- ========== LO QUE DICEN DEL GÉNERO (fragmentos literales de Google) ========== -->
+    <section class="seccion seccion--rosa" aria-labelledby="t-citas">
+      <div class="contenedor">
+        <h2 id="t-citas">Variedad, calidad y buen precio</h2>
+        <ul class="citas">
+          <li>
+            <blockquote><p>Comercio muy completo</p></blockquote>
+            <p class="autor">Nekane Naveira</p>
+          </li>
+          <li>
+            <blockquote><p>Conseguí lo que buscaba.</p></blockquote>
+            <p class="autor">Idoia Rúa</p>
+          </li>
+          <li>
+            <blockquote><p>…muy buenos productos a precios razonables</p></blockquote>
+            <p class="autor">Gorka Fer</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== LLAMADA ========== -->
+    <section class="seccion seccion--corta" aria-label="Llamar a la tienda">
+      <div class="contenedor">
+        <div class="llamar llamar--fila">
+          <div>
+            <p class="llamar__titulo">¿No ves lo que buscas?</p>
+            <p>Llámanos y te decimos al momento si lo tenemos.</p>
+          </div>
+          <a class="boton boton--accion boton--grande" href="tel:+34943514598">
+            <svg class="icono" aria-hidden="true"><use href="#i-tel"/></svg>
+            <span>Llamar al 943 51 45 98</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== PIE ========== -->
+  <footer class="pie">
+    <div class="cinta cinta--pie" aria-hidden="true"></div>
+    <div class="contenedor">
+      <p class="pie__nombre">Mercería Visol</p>
+      <nav aria-label="Pie de página">
+        <p class="pie__menu"><a href="index.html">Inicio</a> · <a href="productos.html" aria-current="page">Productos</a> · <a href="contacto.html">Contacto</a> · <a href="legal.html">Aviso legal y privacidad</a></p>
+      </nav>
+      <p>Maurice Ravel Kalea, 10 · 20100 Errenteria · <a href="tel:+34943514598">943 51 45 98</a></p>
+      <p class="pie__firma">Propuesta de diseño · Muner E.B. · 688 628 668</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
