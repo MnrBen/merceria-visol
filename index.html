@@ -58,7 +58,8 @@
         <div class="portada__texto">
           <p class="saludo"><span lang="eu">Ongi etorri</span></p>
           <h1 id="titulo">Mercería Visol</h1>
-          <p class="lema">Mercería y lencería de barrio en Errenteria.</p>
+          <p class="lema">Tu mercería en Errenteria.</p>
+          <p class="intro">Hilos, botones y todo lo necesario para coser, arreglar o tejer en casa. Y si no sabes muy bien qué te hace falta, te ayudamos a encontrarlo: es lo que más destacan quienes nos visitan.</p>
 
           <div class="cinta" aria-hidden="true"></div>
 
@@ -66,7 +67,7 @@
             <li>
               <a href="#productos">
                 <svg class="icono" aria-hidden="true"><use href="#i-bolsa"/></svg>
-                <span>Hilos, botones, ropa interior y mucho más</span>
+                <span>Hilos, botones y mucho más</span>
               </a>
             </li>
             <li>
@@ -107,65 +108,62 @@
         <h2 id="t-productos">Qué encontrarás</h2>
         <p class="entradilla">Todo lo necesario para coser, arreglar y tejer, y también ropa interior y complementos.</p>
 
-        <h3 class="subtitulo">Mercería</h3>
-        <p class="nota">Categorías de ejemplo, a falta de confirmar con la tienda.</p>
-
-        <ul class="categorias">
-          <li class="categoria">
+        <div class="productos">
+          <!-- Mosaico decorativo: las fotos no son enlaces ni categorías -->
+          <div class="mosaico">
             <figure class="foto">
               <img src="imagenes/hilos-640.webp" srcset="imagenes/hilos-640.webp 640w, imagenes/hilos-854.webp 854w"
-                   sizes="(min-width: 1100px) 245px, calc(50vw - 1.6rem)"
+                   sizes="(min-width: 860px) 250px, calc(50vw - 1.5rem)"
                    width="640" height="480" loading="lazy" alt="Bobinas de hilo de colores en fila sobre una mesa de madera">
               <figcaption class="etiqueta-foto">Foto de ejemplo</figcaption>
             </figure>
-            <h4>Hilos y bobinas</h4>
-          </li>
-          <li class="categoria">
             <figure class="foto">
               <img src="imagenes/botones-640.webp" srcset="imagenes/botones-640.webp 640w, imagenes/botones-855.webp 855w"
-                   sizes="(min-width: 1100px) 245px, calc(50vw - 1.6rem)"
+                   sizes="(min-width: 860px) 250px, calc(50vw - 1.5rem)"
                    width="640" height="480" loading="lazy" alt="Botones de distintos tamaños, colores y materiales">
               <figcaption class="etiqueta-foto">Foto de ejemplo</figcaption>
             </figure>
-            <h4>Botones</h4>
-          </li>
-          <li class="categoria">
             <figure class="foto">
               <img src="imagenes/lanas-640.webp" srcset="imagenes/lanas-640.webp 640w, imagenes/lanas-994.webp 994w"
-                   sizes="(min-width: 1100px) 245px, calc(50vw - 1.6rem)"
+                   sizes="(min-width: 860px) 250px, calc(50vw - 1.5rem)"
                    width="640" height="480" loading="lazy" alt="Ovillos de lana de colores apilados">
               <figcaption class="etiqueta-foto">Foto de ejemplo</figcaption>
             </figure>
-            <h4>Lanas y ovillos</h4>
-          </li>
-          <li class="categoria">
             <figure class="foto">
               <img src="imagenes/alfileres-640.webp" srcset="imagenes/alfileres-640.webp 640w, imagenes/alfileres-1000.webp 1000w"
-                   sizes="(min-width: 1100px) 245px, calc(50vw - 1.6rem)"
+                   sizes="(min-width: 860px) 250px, calc(50vw - 1.5rem)"
                    width="640" height="480" loading="lazy" alt="Alfileres de cabeza de colores sobre una tela clara">
               <figcaption class="etiqueta-foto">Foto de ejemplo</figcaption>
             </figure>
-            <h4>Agujas y alfileres</h4>
-          </li>
-        </ul>
+          </div>
 
-        <ul class="etiquetas" aria-label="Otros artículos de mercería (de ejemplo)">
-          <li>Cremalleras</li>
-          <li>Cintas y puntillas</li>
-          <li>Gomas y elásticos</li>
-          <li>Tijeras y dedales</li>
-          <li>Parches y apliques</li>
-        </ul>
-
-        <h3 class="subtitulo">Lencería y complementos <span class="confirmar">[CONFIRMAR]</span></h3>
-        <p class="nota">Según los directorios comerciales y las opiniones de clientes.</p>
-        <ul class="etiquetas etiquetas--rosa">
-          <li>Ropa interior</li>
-          <li>Calcetines y medias</li>
-          <li>Bañadores</li>
-          <li>Bufandas y guantes</li>
-          <li>Paraguas</li>
-        </ul>
+          <div class="listas">
+            <div>
+              <h3 class="subtitulo">Mercería</h3>
+              <ul class="lista">
+                <li>Hilos y bobinas</li>
+                <li>Botones</li>
+                <li>Lanas y ovillos</li>
+                <li>Agujas y alfileres</li>
+                <li>Cremalleras</li>
+                <li>Cintas y puntillas</li>
+                <li>Gomas y elásticos</li>
+                <li>Tijeras y dedales</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="subtitulo">Lencería y complementos <span class="confirmar">[CONFIRMAR]</span></h3>
+              <ul class="lista">
+                <li>Ropa interior</li>
+                <li>Calcetines y medias</li>
+                <li>Bañadores</li>
+                <li>Bufandas y guantes</li>
+                <li>Paraguas</li>
+              </ul>
+            </div>
+            <p class="nota">Listado orientativo, a falta de confirmar con la tienda.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -193,18 +191,8 @@
           </li>
           <li class="opinion">
             <p class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</p>
-            <blockquote><p>Son super amables lo mismo la madre que la hija son encantadoras.</p></blockquote>
-            <p class="autor">Emilia Robledo Garriz</p>
-          </li>
-          <li class="opinion">
-            <p class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</p>
             <blockquote><p>De lo mejor del barrio!!</p></blockquote>
             <p class="autor">Oscar</p>
-          </li>
-          <li class="opinion">
-            <p class="estrellas" role="img" aria-label="4 de 5 estrellas">★★★★<span class="estrella-vacia">★</span></p>
-            <blockquote><p>Conseguí lo que buscaba.</p></blockquote>
-            <p class="autor">Idoia Rúa</p>
           </li>
         </ul>
 
@@ -226,16 +214,12 @@
           <table class="horario">
             <caption class="sr">Horario de apertura de la tienda</caption>
             <tbody>
-              <tr data-dia="1" data-tramos="09:30-13:00 17:00-19:45"><th scope="row">Lunes</th><td>9:30–13:00 <span class="y">y</span> 17:00–19:45</td></tr>
-              <tr data-dia="2" data-tramos="09:30-13:00 16:00-19:00"><th scope="row">Martes</th><td>9:30–13:00 <span class="y">y</span> 16:00–19:00</td></tr>
-              <tr data-dia="3" data-tramos="09:30-13:00 17:00-19:45"><th scope="row">Miércoles</th><td>9:30–13:00 <span class="y">y</span> 17:00–19:45</td></tr>
-              <tr data-dia="4" data-tramos="09:30-13:00 16:00-19:00"><th scope="row">Jueves</th><td>9:30–13:00 <span class="y">y</span> 16:00–19:00</td></tr>
-              <tr data-dia="5" data-tramos="09:30-13:00 17:00-19:45"><th scope="row">Viernes</th><td>9:30–13:00 <span class="y">y</span> 17:00–19:45</td></tr>
-              <tr data-dia="6" data-tramos="10:00-13:00"><th scope="row">Sábado</th><td>10:00–13:00</td></tr>
-              <tr data-dia="0" data-tramos=""><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              <tr data-dias="1 3 5" data-tramos="09:30-13:00 17:00-19:45"><th scope="row">Lunes, miércoles y viernes</th><td>9:30–13:00<br>17:00–19:45</td></tr>
+              <tr data-dias="2 4" data-tramos="09:30-13:00 16:00-19:00"><th scope="row">Martes y jueves</th><td>9:30–13:00<br>16:00–19:00</td></tr>
+              <tr data-dias="6" data-tramos="10:00-13:00"><th scope="row">Sábado</th><td>10:00–13:00</td></tr>
+              <tr data-dias="0" data-tramos=""><th scope="row">Domingo</th><td>Cerrado</td></tr>
             </tbody>
           </table>
-          <p class="nota">Festivos y vacaciones: <span class="confirmar">[CONFIRMAR]</span></p>
         </div>
 
         <div class="llamar">
@@ -281,7 +265,6 @@
     <div class="contenedor">
       <p class="pie__nombre">Mercería Visol</p>
       <p>Maurice Ravel Kalea, 10 · 20100 Errenteria · <a href="tel:+34943514598">943 51 45 98</a></p>
-      <p class="pie__fotos">Las fotos son de ejemplo, de bancos de imágenes libres (CC0).</p>
       <p class="pie__firma">Propuesta de diseño · Muner E.B. · 688 628 668</p>
     </div>
   </footer>

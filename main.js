@@ -14,9 +14,9 @@
   if (parametros.has('limpio')) document.documentElement.classList.add('limpio');
 
   /* ---------- Horario: abierto ahora / cerrado ---------- */
-  // Los tramos se leen de la propia tabla (data-tramos), así el horario
-  // solo está escrito en un sitio.
-  var filas = document.querySelectorAll('.horario tr[data-dia]');
+  // Los tramos se leen de la propia tabla (data-dias y data-tramos), así el
+  // horario solo está escrito en un sitio. Una fila puede valer para varios días.
+  var filas = document.querySelectorAll('.horario tr[data-dias]');
   var estado = document.querySelector('[data-estado]');
   var estadoCorto = document.querySelector('[data-estado-corto]');
   if (!filas.length || !estado) return;
@@ -25,11 +25,16 @@
   var horario = {};
   filas.forEach(function (fila) {
     var tramos = fila.getAttribute('data-tramos').trim();
-    horario[fila.getAttribute('data-dia')] = tramos ? tramos.split(/\s+/).map(function (t) {
+    var lista = tramos ? tramos.split(/\s+/).map(function (t) {
       var partes = t.split('-');
       return [aMinutos(partes[0]), aMinutos(partes[1])];
     }) : [];
+    diasDe(fila).forEach(function (dia) { horario[dia] = lista; });
   });
+
+  function diasDe(fila) {
+    return fila.getAttribute('data-dias').trim().split(/\s+/);
+  }
 
   function aMinutos(hhmm) {
     var p = hhmm.split(':');
@@ -104,7 +109,7 @@
     // Resalta el día de hoy en la tabla
     var diaHoy = String(ahoraEnTienda().dia);
     filas.forEach(function (fila) {
-      fila.classList.toggle('hoy', fila.getAttribute('data-dia') === diaHoy);
+      fila.classList.toggle('hoy', diasDe(fila).indexOf(diaHoy) !== -1);
     });
   }
 
